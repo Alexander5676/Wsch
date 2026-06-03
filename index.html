@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wsch Portal</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar" aria-label="Главная навигация">
+        <strong class="brand">Wsch Portal</strong>
+        <div class="role-switcher" role="tablist" aria-label="Роли портала">
+          <button class="role-button is-active" type="button" data-role="client" role="tab" aria-selected="true">Клиент</button>
+          <button class="role-button" type="button" data-role="teacher" role="tab" aria-selected="false">Педагог</button>
+          <button class="role-button" type="button" data-role="admin" role="tab" aria-selected="false">Администратор</button>
+        </div>
+      </nav>
+      <section class="hero-grid">
+        <div>
+          <p class="eyebrow">Единое пространство школы</p>
+          <h1>Клиенты, педагоги и администраторы работают в одном окне</h1>
+          <p class="hero-copy">
+            Прототип подтягивает данные из Alfa CRM, показывает расписание, баланс,
+            домашние задания, прогресс и обращения, а также готовит обязательные push-уведомления.
+          </p>
+          <div class="hero-actions">
+            <button id="pushButton" class="primary-action" type="button">Включить push-уведомления</button>
+            <span id="pushStatus" class="status-pill">Не подключены</span>
+          </div>
+        </div>
+        <aside class="integration-card" aria-label="Интеграция Alfa CRM">
+          <span class="integration-label">Alfa CRM sync</span>
+          <ul id="crmSyncList"></ul>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section id="clientView" class="role-view" aria-label="Кабинет клиента"></section>
+      <section id="teacherView" class="role-view is-hidden" aria-label="Кабинет педагога"></section>
+      <section id="adminView" class="role-view is-hidden" aria-label="Кабинет администратора"></section>
+    </main>
+
+    <template id="cardTemplate">
+      <article class="card"></article>
+    </template>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>

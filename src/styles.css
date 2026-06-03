@@ -1,0 +1,361 @@
+:root {
+  color: #243044;
+  background: #f5f7fb;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.hero {
+  background: radial-gradient(circle at top left, #ffe9f0, transparent 30%), linear-gradient(135deg, #18233c, #4764c9);
+  color: #fff;
+  padding: 24px clamp(16px, 4vw, 56px) 48px;
+}
+
+.topbar,
+.hero-grid,
+.card-title-row,
+.hero-actions,
+.progress-row,
+.request-row,
+.push-row,
+.history-row {
+  align-items: center;
+  display: flex;
+}
+
+.topbar {
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 52px;
+}
+
+.brand {
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+
+.role-switcher {
+  background: rgb(255 255 255 / 12%);
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 999px;
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+}
+
+.role-button,
+.primary-action,
+.secondary-action,
+.mini-button,
+.link-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.role-button {
+  background: transparent;
+  border-radius: 999px;
+  color: #fff;
+  padding: 10px 16px;
+}
+
+.role-button.is-active,
+.primary-action {
+  background: #ff5a89;
+  color: #fff;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 32px;
+}
+
+.eyebrow,
+.integration-label {
+  color: #ffd5df;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 6vw, 5rem);
+  line-height: 0.98;
+  margin: 0 0 24px;
+  max-width: 900px;
+}
+
+.hero-copy {
+  color: #dbe5ff;
+  font-size: 1.15rem;
+  max-width: 780px;
+}
+
+.hero-actions {
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.primary-action,
+.secondary-action {
+  border-radius: 14px;
+  font-weight: 800;
+  padding: 12px 18px;
+}
+
+.secondary-action {
+  background: #edf2ff;
+  color: #2840a7;
+}
+
+.status-pill,
+.tag {
+  border-radius: 999px;
+  display: inline-flex;
+  font-size: 0.86rem;
+  font-weight: 800;
+  padding: 7px 11px;
+}
+
+.status-pill {
+  background: rgb(255 255 255 / 16%);
+  color: #fff;
+}
+
+.status-pill.success,
+.tag.success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-pill.warning,
+.tag.warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.integration-card,
+.card {
+  backdrop-filter: blur(18px);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: 28px;
+  box-shadow: 0 22px 80px rgb(17 24 39 / 16%);
+}
+
+.integration-card {
+  background: rgb(255 255 255 / 13%);
+  padding: 24px;
+}
+
+.integration-card ul {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+}
+
+.integration-card li {
+  border-bottom: 1px solid rgb(255 255 255 / 14%);
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+main {
+  padding: 32px clamp(16px, 4vw, 56px) 56px;
+}
+
+.role-view {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.role-view.is-hidden {
+  display: none;
+}
+
+.card {
+  background: rgb(255 255 255 / 88%);
+  padding: 24px;
+}
+
+.card-title-row {
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.card h2,
+.student-card h3,
+.client-card h3 {
+  margin: 0;
+}
+
+.tag {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline div,
+.lesson-note,
+.news-item,
+.student-card,
+.client-card,
+.admin-table div,
+.chat-card,
+.attachment-form,
+.stacked-form {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 14px;
+}
+
+.timeline span,
+.news-item span,
+.request-row span,
+.push-row span,
+.history-row span,
+.lesson-note p,
+.client-card p,
+.student-card p {
+  color: #64748b;
+}
+
+.timeline div,
+.news-item,
+.stacked-form,
+.attachment-form,
+.admin-table,
+.balance-grid,
+.chat-card {
+  display: grid;
+  gap: 10px;
+}
+
+.balance-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.balance-grid div {
+  background: linear-gradient(135deg, #eef2ff, #fff);
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.balance-grid span {
+  color: #64748b;
+  display: block;
+}
+
+.balance-grid strong {
+  display: block;
+  font-size: 1.5rem;
+  margin-top: 6px;
+}
+
+.progress-row {
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.progress-row label {
+  min-width: 140px;
+}
+
+meter {
+  flex: 1;
+  height: 14px;
+}
+
+.mini-button {
+  background: #e0e7ff;
+  border-radius: 10px;
+  color: #3730a3;
+  font-weight: 900;
+  min-width: 32px;
+  padding: 6px 8px;
+}
+
+.link-button {
+  background: none;
+  color: #4056c9;
+  padding: 0;
+  text-decoration: underline;
+}
+
+textarea,
+input,
+select {
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  min-height: 42px;
+  padding: 10px;
+  width: 100%;
+}
+
+textarea {
+  min-height: 92px;
+  resize: vertical;
+}
+
+.request-row,
+.push-row,
+.history-row {
+  border-bottom: 1px solid #e5e7eb;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.admin-table div {
+  grid-template-columns: 170px 140px 1fr;
+}
+
+@media (max-width: 900px) {
+  .topbar,
+  .hero-grid {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .role-switcher {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .role-view,
+  .balance-grid,
+  .admin-table div {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
